@@ -1,0 +1,1 @@
+cucumber cucumber --format progress
