@@ -2,17 +2,24 @@ doctype 5
 html(lang="en", ng-app="myApp")
   head
     meta(charset="utf-8")
-    title Pairing stats
+    title #{title}
     link(rel="stylesheet", href="stylesheets/app.css")
+    link(rel="stylesheet", href="lib/bootstrap/css/bootstrap.css")
   body
     ul(class="menu")
       li
         a(href="#/view1") view1
       li
         a(href="#/view2") view2
-    div(ng-view)
-    div Angular seed app: v
-      span(app-version)
+
+    .container
+      block content
+
+    hr.footer-hr
+    footer
+      p &copy; Damian Stanger 2013 -
+        i Powered by angularJS, node.js, express.js, jade, less-middleware, MongoDB
+
     //- In production use:
       script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
     script(src="lib/angular/angular.js")
@@ -21,11 +28,3 @@ html(lang="en", ng-app="myApp")
     script(src="js/controllers.js")
     script(src="js/filters.js")
     script(src="js/directives.js")
-
-    .container
-      block content
-
-    hr.footer-hr
-    footer
-      p &copy; Damian Stanger 2012 -
-        i Powered by node.js, express.js, jade, less-middleware, MongoDB

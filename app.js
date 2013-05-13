@@ -31,7 +31,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/pairing', pairing.index);
+app.get('/pairs', pairing.index);
 //app.get('/users', user.list);
 //app.get('/user/anotherGame', user.anotherGame);
 //app.post('/user/create', user.create);
