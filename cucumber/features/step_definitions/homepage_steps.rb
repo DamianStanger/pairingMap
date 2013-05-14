@@ -10,3 +10,6 @@ end
 Then(/^i should see "([^"]*)"$/) do |arg|
   find('div[ng-view] p:first-child').text.should =~ Regexp.new(arg)
 end
+When(/^i goto the path "([^"]*)"$/) do |arg|
+  visit 'http://localhost:1337' + arg
+end

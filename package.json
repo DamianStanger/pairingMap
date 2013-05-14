@@ -10,7 +10,7 @@
     "jade": "*",
     "less-middleware": "*",
     "requirejs": "*",
-    "should": "*",
+    "chai": "*",
     "sinon": "*"
   }
 }

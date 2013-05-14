@@ -1,11 +1,7 @@
+/*jshint unused:false*/
 'use strict';
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
-
-
-function MyCtrl2() {}
-MyCtrl2.$inject = [];
-
-function PairsController() {}
-PairsController.$inject = [];
+function PairsController($scope, $routeParams) {
+  $scope.pairs = ["Damo", "Rob"];
+}
+//PairsController.$inject = [];

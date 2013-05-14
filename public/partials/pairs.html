@@ -1,7 +1,14 @@
-<p>Pairs</p>
+<div ng-controller="PairsController">
+  <p>Pairs</p>
 
-<table id="pairingMapGrid">
-  <thead>
-    <tr><td></td></tr>
-  </thead>
-</table>
+  <table id="pairingMapGrid">
+    <thead>
+      <tr>
+        <td></td>
+        <td ng-repeat="pair in pairs">
+          {{pair}}
+        </td>
+      </tr>
+    </thead>
+  </table>
+</div>

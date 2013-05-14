@@ -1,32 +1,20 @@
-/* global MyCtrl1, MyCtrl2 */
+/* global chai, PairsController */
 'use strict';
 
-/* jasmine specs for controllers go here */
 
-describe('MyCtrl1', function(){
-  var myCtrl1;
+describe('PairsController', function(){
+  var expect = chai.expect,
+    pairsController,
+    scope;
 
   beforeEach(function(){
-    myCtrl1 = new MyCtrl1();
+    scope = {};
+    pairsController = new PairsController(scope);
   });
 
 
-  it('should ....', function() {
-    //spec body
+  it('should populate the scope with a list of developers', function() {
+    expect(scope.pairs).to.eql(["Damo", "Rob"]);
   });
 });
 
-
-describe('MyCtrl2', function(){
-  var myCtrl2;
-
-
-  beforeEach(function(){
-    myCtrl2 = new MyCtrl2();
-  });
-
-
-  it('should ....', function() {
-    //spec body
-  });
-});

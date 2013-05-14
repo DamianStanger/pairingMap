@@ -10,6 +10,7 @@ files = [
   'public/lib/angular/angular.js',
   'public/lib/angular/angular-*.js',
   'testAngular/lib/angular/angular-mocks.js',
+  'testAngular/lib/chai.js',
   'public/js/**/*.js',
   'testAngular/unit/**/*.js'
 ],
@@ -17,6 +18,7 @@ files = [
 autoWatch = false,
 singleRun = true,
 
+//browsers = ['Chrome'],
 browsers = ['PhantomJS'],
 
 junitReporter = {
