@@ -5,4 +5,6 @@ Feature: Viewing Pairing Statistics
 
   Scenario: Initial view of the pairing map
     Given im on the pairingMap page
-    Then i should see the pairs names
+    Then i should see the pairs names:
+    | Damo |
+    | Rob |
