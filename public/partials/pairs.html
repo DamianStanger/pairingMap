@@ -5,14 +5,17 @@
     <thead>
       <tr>
         <td></td>
-        <td ng-repeat="pair in pairs">
-          {{pair}}
+        <td ng-repeat="item in pairs" class="pair_name">
+          {{item[0]}}
         </td>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="pair in pairs">
-        <td>{{pair}}</td>
+      <tr ng-repeat="item in pairs">
+        <td class="pair_name">{{item[0]}}</td>
+        <td ng-repeat="data in item.slice(1)" class="pair_data">
+          {{data}}
+        </td>
       </tr>
     </tbody>
   </table>

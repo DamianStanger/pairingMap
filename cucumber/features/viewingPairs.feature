@@ -11,3 +11,9 @@ Feature: Viewing Pairing Statistics
     And i should see the pairs names vertically:
       | Damo |
       | Rob |
+
+  Scenario: Initial view of the commits per pair
+    Given im on the pairingMap page
+    Then i should see commits per pair:
+      | 1 | 2 |
+      | 2 | 3 |
