@@ -11,6 +11,7 @@ files = [
   'public/lib/angular/angular-*.js',
   'testAngular/lib/angular/angular-mocks.js',
   'testAngular/lib/chai.js',
+  'testAngular/lib/sinon-1.7.1.js',
   'public/js/**/*.js',
   'testAngular/unit/**/*.js'
 ],

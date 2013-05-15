@@ -1,30 +1,22 @@
-/* global chai, PairsController */
+/* global chai, sinon, pairsController */
 'use strict';
 
 
 describe('PairsController', function(){
   var expect = chai.expect,
-    pairsController,
-    scope;
+    scope,
+    pairingServiceMock;
 
-  beforeEach(function(){
-    scope = {};
-    pairsController = new PairsController(scope);
-  });
-
+  beforeEach(inject(function($rootScope, $controller) {
+    scope = $rootScope.$new();
+    pairingServiceMock = {getPairs:sinon.stub().returns(42)};
+    $controller(pairsController, {$scope: scope, pairingService: pairingServiceMock});
+  }));
 
   describe('scope pairs', function() {
     it('should contain a list of developers', function() {
-      expect(scope.pairs).to.have.length(2);
-      expect(scope.pairs.map(function(item){return item[0];})).to.eql(["Damo", "Rob"]);
-    });
-
-    it('should contain commits per developer pair', function() {
-      expect(scope.pairs).to.eql([["Damo", 1, 2], ["Rob", 2, 3]]);
+      expect(scope.pairs).to.equal(42);
     });
   });
-
-
-
 });
 
